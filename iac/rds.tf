@@ -17,7 +17,7 @@ resource "aws_db_instance" "database_instance" {
   identifier             = var.database_instance_identifier
   username               = local.secrets.username
   password               = local.secrets.password
-  db_name                = local.secrets.rds_db_name
+  db_name                = local.secrets.db_name
   instance_class         = var.database_instance_class
   allocated_storage      = 200
   db_subnet_group_name   = aws_db_subnet_group.database_subnet_group.name
